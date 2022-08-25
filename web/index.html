@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sahir | Portfolio</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="title" content="Sahir khan | Web Developer" />
+    <meta name="description"
+        content="I have experience in developing functional web application using JavaScript/jquery, XML, HTML, CSS. I wish to grow other businesses through my coding and organizational skills." />
+    <meta name="theme-color" content="#252525">
+
+    <link rel="stylesheet" href="./style.css" />
+
+</head>
+
+<body>
+
+    <div id="rootContainer">
+
+    </div>
+
+    <ul class="background">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+
+    <script>
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+        var userQuery = getParameterByName("user")
+        var urlParam = userQuery ? userQuery : 'sahirskd'
+        // console.log(urlParam)
+
+
+        fetch('https://skd-redis.herokuapp.com/portfolio/' + urlParam, {
+            method: "GET",
+            headers: {
+                'Content-type': 'application/json'
+            },
+            // body: JSON.stringify(formData)
+        }).then(res => {
+            return res
+        }).then(res => res.json()).then((data) => {
+            // console.log(data)
+            if (data.fullName) {
+                document.title = data.fullName + " | Portfolio"
+            }
+
+            let socialLinks = JSON.parse(data.socialLinks)
+            // console.log(socialLinks)
+
+            let expData = JSON.parse(data.experience)
+            // console.log(expData)
+            let experineceDiv = ""
+            expData.forEach(element => {
+                experineceDiv += `<span class="subHead"><b>${element.company}</b></span>
+                    <p class="para">
+                       ${element.experience}
+                    </p>`
+            });
+
+            let eduData = JSON.parse(data.education)
+            let educationDiv = ""
+            eduData.forEach(element => {
+                educationDiv += `<span class="subHead"><b>${element.educationTitle}</b></span>
+                    <p class="para">
+                       ${element.educationDesc}
+                    </p>`
+            });
+            // console.log(eduData)
+
+            let skillsData = data.skills
+            let skillsDiv = ""
+            skillsData.forEach(skill => {
+                skillsDiv += `   <div class="iconSet">
+                        <b class="skill__heading">${skill}</b>
+                        <div class="skillIcon">
+                            <img src="https://sahir.in/asset/bx_bxs-star-half 1.png" alt="" />
+                            <img src="https://sahir.in/asset/bx_bxs-star-half 1.png" alt="" />
+                            <img src="https://sahir.in/asset/bx_bxs-star-half 1.png" alt="" />
+                            <img src="https://sahir.in/asset/bx_bxs-star-half 1.png" alt="" />
+                            <img src="https://sahir.in/asset/bx_bxs-star-half.png" alt="" />
+                        </div>
+                    </div>`
+            });
+            // console.log(skillsDiv)
+
+
+            // console.log(experineceDiv)
+
+            var generatedPortfolio = `<div class="container">
+
+            <div class="slide-in-top firstContianer Position">
+                <div class="firstBox Box">
+                    <img alt="image" class="rounded-circle" src="${data.image ? data.image : "https://img.freepik.com/free-vector/illustration-user-avatar-icon_53876-5907.jpg"}" />
+                    <h1 class="heading">${data.fullName}</h1>
+                    <h3 class="subHead main_sub_heading">${data.designation}</h3>
+                    <p class="para">${data.about}</p>
+                    <h2 class="subHead1">Contact</h2>
+                    <h3 class="subHead">Address:</h3>
+
+                    <p>${data.address}</p>
+                    <h3 class="subHead">Phone Number:</h3>
+                    <p>${data.phone}</p>
+
+                    <a rel="noopener" href="https://wa.me/${data.phone}"><img class="socialIcons"
+                            src="https://sahir.in/asset/icons/whatsapp.png" alt="whatsapp" /></a>
+
+                    <a rel="noopener" target="_blank" href="${socialLinks.linkedin}"><img
+                            class="socialIcons" src="https://sahir.in/asset/icons/linkedin.png" alt="linkedin" /></a>
+
+                    <a rel="noopener" target="_blank" href="${socialLinks.twitter}"><img class="socialIcons"
+                            src="https://sahir.in/asset/icons/twitter.png" alt="twitter" /></a>
+
+                    <a rel="noopener" target="_blank" href="${socialLinks.instagram}"><img
+                            class="socialIcons" src="https://sahir.in/asset/icons/instagram.png" alt="instagram" /></a>
+
+                    <a rel="noopener" target="_blank" href="${socialLinks.github}"><img class="socialIcons"
+                            src="https://sahir.in/asset/icons/github (1).png" alt="github" /></a>
+
+                    <div class="buttons">
+                        <a href="tel:${data.phone}"><button class="btn secondary__button">
+                                CONTACT ME
+                            </button></a>
+                        <a target="_blank" href="${data.resumeLink}"><button class="btn">DOWNLOAD
+                                CV</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-in-bottom secondContainer Position">
+                <div class="secondBox Box">
+                    <h2 class="subHead1">Experiences</h2>
+                  ${experineceDiv}
+                   
+                    <h2 class="subHead1">Education</h2>
+                    ${educationDiv}
+                
+                    <h2 class="subHead1">Skills</h2>
+
+                  ${skillsDiv}
+                  
+                </div>
+            </div>
+
+            </div>`
+
+
+            document.getElementById("rootContainer").innerHTML = generatedPortfolio;
+        }).catch(error => {
+            let errorHeading = `<h1 class="error__heading">Looks like you have arrived on the wrong page!</h1>`
+            // document.getElementById("body").appendChild = errorHeading
+            document.querySelector("body").insertAdjacentHTML('beforeend', errorHeading)
+            console.log(error)
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>
