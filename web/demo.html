@@ -385,7 +385,7 @@
             let enteredUsername = e.target.value;
 
             if (enteredUsername.length > 3) {
-                fetch('https://sahirskd.github.io/portfolio/search/' + enteredUsername, {
+                fetch('https://skd-redis.herokuapp.com/portfolio/search/' + enteredUsername, {
                     method: "GET",
                     headers: {
                         'Content-type': 'application/json'
@@ -519,7 +519,7 @@
             }).then(res => res.json()).then(data => {
                 // console.log(data)
                 portfolioPopup.style.display = "none"
-                window.open(`https://sahirskd.github.io/my-portfolio/?user=${data.userName}`)
+                window.open(`https://skd-redis.herokuapp.com/my-portfolio/?user=${data.userName}`)
             }).catch(error => console.log(error))
 
         });
