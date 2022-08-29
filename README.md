@@ -22,18 +22,18 @@ Here's a short video that explains the project and how it uses Redis:
 
 - Everytime a user submits a portfolio form, the data gets converted into an object and sent to the Redis Database
   - All fields of the object are as follows:
-    - userName: eg. sahirsk
-    - fullName: eg. Sahir khan
-    - image: eg. base64
-    - designation: eg. Web developer
-    - about: eg. Self learned developer
-    - address: eg. address
-    - phone: eg. +919999888899
-    - socialLinks: eg. [Links]
-    - resumeLink: eg. Link
-    - skills: eg. [HTML, CSS, JS]
-    - experience: eg. [{compay: "Demo 1", description: "demo description"}]
-    - education: eg. [{degree: "Demo 1", description: "demo description"}]
+    - `userName`: eg. sahirsk
+    - `fullName`: eg. Sahir khan
+    - `image`: eg. base64
+    - `designation`: eg. Web developer
+    - `about`: eg. Self learned developer
+    - `address`: eg. address
+    - `phone`: eg. +919999888899
+    - `socialLinks`: eg. [Links]
+    - `resumeLink`: eg. Link
+    - `skills`: eg. [HTML, CSS, JS]
+    - `experience`: eg. [{compay: "Demo 1", description: "demo description"}]
+    - `education`: eg. [{degree: "Demo 1", description: "demo description"}]
 
 ### How the data is accessed:
 
@@ -52,10 +52,6 @@ Here's a short video that explains the project and how it uses Redis:
 - To get a particular portfolio by the username `(Method: GET)`:
 
   - `https://[your-domain]/portfolio/{userName}`
-
-### Performance Benchmarks
-
-[If you migrated an existing app to use Redis, please put performance benchmarks here to show the performance improvements.]
 
 ## How to run it locally?
 
