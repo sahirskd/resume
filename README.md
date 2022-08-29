@@ -20,7 +20,13 @@ Here's a short video that explains the project and how it uses Redis:
 
 ### How the data is stored:
 
-Refer to [this example](https://github.com/redis-developer/basic-analytics-dashboard-redis-bitmaps-nodejs#how-the-data-is-stored) for a more detailed example of what you need for this section.
+- The event data is stored in various keys and various data types.
+  - For each of time spans:
+    - year: like 2021
+    - month: like 2021-03 (means March of 2021)
+    - day: like 2021-03-03 (means 3rd March of 2021)
+    - weekOfMonth: like 2021-03/4 (means 4th week of March 2021)
+    - anytime
 
 ### How the data is accessed:
 
