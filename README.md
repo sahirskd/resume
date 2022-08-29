@@ -47,11 +47,11 @@ Here's a short video that explains the project and how it uses Redis:
 
 - To delete a particular portfolio using it's entityId (Method: DELETE):
 
-  - https://skd-redis.herokuapp.com/portfolio/{entityId}
+  - https://[your-domain]/portfolio/{entityId}
 
 - To get a particular portfolio by the username (Method: DELETE):
 
-  - https://skd-redis.herokuapp.com/portfolio/{userName}
+  - https://[your-domain]/portfolio/{userName}
 
 ### Performance Benchmarks
 
