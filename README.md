@@ -14,7 +14,7 @@ Here's a short video that explains the project and how it uses Redis:
 
 [Insert your own video here, and remove the one below]
 
-[![Embed your YouTube video]([https://i.ytimg.com/vi/vyxdC1qK4NE/maxresdefault.jpg](https://raw.githubusercontent.com/sahirskd/resume/main/docs/Screenshot_1.jpg))](https://www.youtube.com/watch?v=urip7_t2oas&themeRefresh=1)
+[![Embed your YouTube video](https://raw.githubusercontent.com/sahirskd/resume/main/docs/Screenshot_1.jpg)](https://www.youtube.com/watch?v=urip7_t2oas&themeRefresh=1)
 
 ## How it works
 
