@@ -535,7 +535,7 @@
                 }).then(res => res.json()).then(data => {
                     // console.log(data)
                     portfolioPopup.style.display = "none"
-                    window.open(`https://skd-redis.herokuapp.com/my-portfolio/?user=${data.userName}`)
+                    window.open(`https://sahirskd.github.io/resume/?user=${data.userName}`)
                 }).catch(error => console.log(error))
             } else {
                 alert("Kindly fill up the form correctly!")
