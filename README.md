@@ -1,4 +1,4 @@
-# [Insert your hackathon title or the app's title (keep it short)]
+# Create and publish personal portfolio in seconds 🚀
 
 [Insert description of app]
 
