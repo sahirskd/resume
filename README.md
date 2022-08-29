@@ -20,13 +20,20 @@ Here's a short video that explains the project and how it uses Redis:
 
 ### How the data is stored:
 
-- The event data is stored in various keys and various data types.
-  - For each of time spans:
-    - year: like 2021
-    - month: like 2021-03 (means March of 2021)
-    - day: like 2021-03-03 (means 3rd March of 2021)
-    - weekOfMonth: like 2021-03/4 (means 4th week of March 2021)
-    - anytime
+- Everytime a user submits a portfolio form, the data gets converted into an object
+  - All fields of the object are as follows:
+    - userName: eg. sahirsk
+    - fullName: eg. Sahir khan
+    - image: eg. base64
+    - designation: eg. Web developer
+    - about: eg. Self learned developer
+    - address: eg. address
+    - phone: eg. +919999888899
+    - socialLinks: eg. [Links]
+    - resumeLink: eg. Link
+    - skills: eg. [HTML, CSS, JS]
+    - experience: eg. [{compay: "Demo 1", description: "demo description"}]
+    - education: eg. [{degree: "Demo 1", description: "demo description"}]
 
 ### How the data is accessed:
 
