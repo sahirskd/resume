@@ -39,19 +39,19 @@ Here's a short video that explains the project and how it uses Redis:
 
 - To get the list of all portfolios created (Method: GET):
 
-  - https://[your-domain]/portfolio/port-all
+  - `https://[your-domain]/portfolio/port-all`
 
 - To search for username using a keyword in the database, it will return true if exist and false if doesn't (Method: GET):
 
-  - https://[your-domain]/portfolio/search/{sahirskd}
+  - `https://[your-domain]/portfolio/search/{sahirskd}`
 
 - To delete a particular portfolio using it's entityId (Method: DELETE):
 
-  - https://[your-domain]/portfolio/{entityId}
+  - `https://[your-domain]/portfolio/{entityId}`
 
 - To get a particular portfolio by the username (Method: DELETE):
 
-  - https://[your-domain]/portfolio/{userName}
+  - `https://[your-domain]/portfolio/{userName}`
 
 ### Performance Benchmarks
 
