@@ -53,13 +53,25 @@ Here's a short video that explains the project and how it uses Redis:
 
   - `https://[your-domain]/portfolio/{userName}`
 
-## How to run it locally?
-
-[Make sure you test this with a fresh clone of your repo, these instructions will be used to judge your app.]
+## Hot to run it locally?
 
 ### Prerequisites
 
-[Fill out with any prerequisites (e.g. Node, Docker, etc.). Specify minimum versions]
+- Node - v16.3 or above
+- NPM - v8.11 or above
+
+### Local installation
+
+Open the terminal and then:
+
+```
+# copy file and set proper data inside
+cp .env.example .env
+# install dependencies
+npm install
+# Run dev server
+npm start
+```
 
 ### Local installation
 
