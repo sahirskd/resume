@@ -3,8 +3,7 @@
 Non technical personal? and want to create your portfolio and publish to the internet? Use [Resume App](https://sahirskd.github.io/resume/demo.html) and fill up the form with the details that you want to see in your resume and hit Create Portfolio button, and that is it you will be redirected to your published portfolio. Now you can share the your published portfolio URL to anyone in the world.
 
 [![Embed your YouTube video](https://raw.githubusercontent.com/sahirskd/resume/main/docs/Screenshot_1.jpg)](https://sahirskd.github.io/resume/demo.html)
-
-[Insert app screenshots](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#uploading-assets)
+[![Embed your YouTube video](https://raw.githubusercontent.com/sahirskd/resume/main/docs/Screenshot_2.jpg)](https://sahirskd.github.io/resume/demo.html)
 
 # Overview video (Optional)
 
