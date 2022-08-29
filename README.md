@@ -1,6 +1,6 @@
 # Create and publish personal portfolio in seconds 🚀
 
-[Insert description of app]
+Non technical personal and want to create your portfolio and publish to the internet? Use [Resume App](https://sahirskd.github.io/resume/demo.html)
 
 [Insert app screenshots](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#uploading-assets)
 
