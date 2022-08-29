@@ -73,29 +73,13 @@ npm install
 npm start
 ```
 
-### Local installation
-
-[Insert instructions for local installation]
-
 ## Deployment
 
 To make deploys work, you need to create free account on [Redis Cloud](https://redis.info/try-free-dev-to)
 
-### Google Cloud Run
-
-[Insert Run on Google button](https://cloud.google.com/blog/products/serverless/introducing-cloud-run-button-click-to-deploy-your-git-repos-to-google-cloud)
-
 ### Heroku
 
-[Insert Deploy on Heroku button](https://devcenter.heroku.com/articles/heroku-button)
-
-### Netlify
-
-[Insert Deploy on Netlify button](https://www.netlify.com/blog/2016/11/29/introducing-the-deploy-to-netlify-button/)
-
-### Vercel
-
-[Insert Deploy on Vercel button](https://vercel.com/docs/deploy-button)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ## More Information about Redis Stack
 
