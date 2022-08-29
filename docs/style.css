@@ -602,6 +602,11 @@ button.disabled {
   pointer-events: none;
 }
 
+.mb-10-block {
+  margin-bottom: 10px;
+  display: block;
+}
+
 @media only screen and (min-width: 1200px) {
   .container {
     width: 1200px;
