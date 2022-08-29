@@ -20,7 +20,7 @@ Here's a short video that explains the project and how it uses Redis:
 
 ### How the data is stored:
 
-- Everytime a user submits a portfolio form, the data gets converted into an object
+- Everytime a user submits a portfolio form, the data gets converted into an object and sent to the Redis Database
   - All fields of the object are as follows:
     - userName: eg. sahirsk
     - fullName: eg. Sahir khan
@@ -37,7 +37,21 @@ Here's a short video that explains the project and how it uses Redis:
 
 ### How the data is accessed:
 
-Refer to [this example](https://github.com/redis-developer/basic-analytics-dashboard-redis-bitmaps-nodejs#how-the-data-is-accessed) for a more detailed example of what you need for this section.
+- To get the list of all portfolios created (Method: GET):
+
+  - https://[your-domain]/portfolio/port-all
+
+- To search for username using a keyword in the database, it will return true if exist and false if doesn't (Method: GET):
+
+  - https://[your-domain]/portfolio/search/{sahirskd}
+
+- To delete a particular portfolio using it's entityId (Method: DELETE):
+
+  - https://skd-redis.herokuapp.com/portfolio/{entityId}
+
+- To get a particular portfolio by the username (Method: DELETE):
+
+  - https://skd-redis.herokuapp.com/portfolio/{userName}
 
 ### Performance Benchmarks
 
