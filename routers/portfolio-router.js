@@ -39,9 +39,9 @@ router.get('/search/:userName', async (req, res) => {
     .where('userName').equals(userName).return.all()
 
   if (Object.entries(avlPortfolio).length === 0) {
-    res.send(true)
-  } else {
     res.send(false)
+  } else {
+    res.send(true)
   }
 
 })
@@ -54,43 +54,3 @@ router.delete('/:id', async (req, res) => {
 
   res.send({ id: req.params.id })
 });
-
-// router.get('/:id', async (req, res) => {
-
-//   /* fetch the Person */
-//   const person = await portfolioRepository.fetch(req.params.id)
-
-//   /* return the fetched Person */
-//   res.send(person)
-// })
-
-// router.post('/:id', async (req, res) => {
-
-//   /* fetch the Person we are updating */
-//   const person = await personRepository.fetch(req.params.id)
-
-//   /* set all the properties, converting missing properties to null */
-//   person.firstName = req.body.firstName ?? null
-//   person.lastName = req.body.lastName ?? null
-//   person.age = req.body.age ?? null
-//   person.verified = req.body.verified ?? null
-//   person.location = req.body.location ?? null
-//   person.locationUpdated = req.body.locationUpdated ?? null
-//   person.skills = req.body.skills ?? null
-//   person.personalStatement = req.body.personalStatement ?? null
-
-//   /* save the updated Person */
-//   await personRepository.save(person)
-
-//   /* return the newly updated Person we just updated */
-//   res.send(person)
-// })
-
-// router.delete('/:id', async (req, res) => {
-
-//   /* delete the Person with its id */
-//   await personRepository.remove(req.params.id)
-
-//   /* return the id of the deleted person */
-//   res.send({ id: req.params.id })
-// })
