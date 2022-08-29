@@ -114,3 +114,8 @@ The above videos and guides should be enough to get you started in your desired 
    - [Redis Stack Real-Time Stock App](https://www.youtube.com/watch?v=mUNFvyrsl8Q) from Ahmad Bazzi
    - [Build a Fullstack Next.js app](https://www.youtube.com/watch?v=DOIWQddRD5M) with Fireship.io
    - [Microservices with Redis Course](https://www.youtube.com/watch?v=Cy9fAvsXGZA) by Scalable Scripts on freeCodeCamp
+
+- I have used the following languages in this project:
+  - HTML
+  - CSS
+  - JavaScript / Express.js
