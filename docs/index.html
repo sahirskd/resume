@@ -8,6 +8,7 @@
     <meta name="description"
         content="I have experience in developing functional web application using JavaScript/jquery, XML, HTML, CSS. I wish to grow other businesses through my coding and organizational skills." />
     <meta name="theme-color" content="#252525">
+    <meta name="node-js-api-url" content="https://skd-redis.onrender.com/">
 
     <link rel="stylesheet" href="./style.css" />
 
@@ -46,7 +47,7 @@
         // console.log(urlParam)
 
 
-        fetch('https://skd-redis.herokuapp.com/portfolio/' + urlParam, {
+        fetch(`${document.querySelector('meta[name="node-js-api-url"]').content}/portfolio/` + urlParam, {
             method: "GET",
             headers: {
                 'Content-type': 'application/json'
@@ -89,11 +90,11 @@
                 skillsDiv += `   <div class="iconSet">
                         <b class="skill__heading">${skill}</b>
                         <div class="skillIcon">
-                            <img src="https://sahir.in/asset/bx_bxs-star-half 1.png" alt="" />
-                            <img src="https://sahir.in/asset/bx_bxs-star-half 1.png" alt="" />
-                            <img src="https://sahir.in/asset/bx_bxs-star-half 1.png" alt="" />
-                            <img src="https://sahir.in/asset/bx_bxs-star-half 1.png" alt="" />
-                            <img src="https://sahir.in/asset/bx_bxs-star-half.png" alt="" />
+                            <img src="https://sahirskd.github.io/Portfolio/asset/bx_bxs-star-half 1.png" alt="" />
+                            <img src="https://sahirskd.github.io/Portfolio/asset/bx_bxs-star-half 1.png" alt="" />
+                            <img src="https://sahirskd.github.io/Portfolio/asset/bx_bxs-star-half 1.png" alt="" />
+                            <img src="https://sahirskd.github.io/Portfolio/asset/bx_bxs-star-half 1.png" alt="" />
+                            <img src="https://sahirskd.github.io/Portfolio/asset/bx_bxs-star-half.png" alt="" />
                         </div>
                     </div>`
             });
@@ -118,19 +119,19 @@
                     <p>${data.phone}</p>
 
                     <a rel="noopener" href="https://wa.me/${data.phone}"><img class="socialIcons"
-                            src="https://sahir.in/asset/icons/whatsapp.png" alt="whatsapp" /></a>
+                            src="https://sahirskd.github.io/Portfolio/asset/icons/whatsapp.png" alt="whatsapp" /></a>
 
                     <a rel="noopener" target="_blank" href="${socialLinks.linkedin}"><img
-                            class="socialIcons" src="https://sahir.in/asset/icons/linkedin.png" alt="linkedin" /></a>
+                            class="socialIcons" src="https://sahirskd.github.io/Portfolio/asset/icons/linkedin.png" alt="linkedin" /></a>
 
                     <a rel="noopener" target="_blank" href="${socialLinks.twitter}"><img class="socialIcons"
-                            src="https://sahir.in/asset/icons/twitter.png" alt="twitter" /></a>
+                            src="https://sahirskd.github.io/Portfolio/asset/icons/twitter.png" alt="twitter" /></a>
 
                     <a rel="noopener" target="_blank" href="${socialLinks.instagram}"><img
-                            class="socialIcons" src="https://sahir.in/asset/icons/instagram.png" alt="instagram" /></a>
+                            class="socialIcons" src="https://sahirskd.github.io/Portfolio/asset/icons/instagram.png" alt="instagram" /></a>
 
                     <a rel="noopener" target="_blank" href="${socialLinks.github}"><img class="socialIcons"
-                            src="https://sahir.in/asset/icons/github (1).png" alt="github" /></a>
+                            src="https://sahirskd.github.io/Portfolio/asset/icons/github (1).png" alt="github" /></a>
 
                     <div class="buttons">
                         <a href="tel:${data.phone}"><button class="btn secondary__button">
